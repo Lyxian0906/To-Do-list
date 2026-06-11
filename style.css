@@ -1,0 +1,190 @@
+:root {
+  --bg: #667eea;
+  --card: rgba(255,255,255,0.15);
+  --text: white;
+  --item: rgba(255,255,255,0.2);
+}
+
+body.dark {
+  --bg: #0f172a;
+  --card: rgba(255,255,255,0.06);
+  --text: #e5e7eb;
+  --item: rgba(255,255,255,0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body {
+  background: linear-gradient(135deg, var(--bg), #764ba2);
+  min-height: 100vh;
+  transition: 0.3s;
+}
+
+.topbar {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.topbar button {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #588aff;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 90px 50px;
+}
+
+.todo-card {
+  width: 100%;
+  max-width: 650px;
+  background: var(--card);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 25px;
+  color: var(--text);
+  transition: 0.3s;
+}
+
+.input-group {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+input, select {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  width: 45px;
+  cursor: pointer;
+  background: #00c896;
+  color: white;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--item);
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+
+  animation: fadeIn 0.3s ease;
+  transition: 0.2s;
+}
+
+li:hover {
+  transform: scale(1.02);
+}
+
+li.done {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.actions button {
+  margin-left: 5px;
+  background: transparent;
+  font-size: 16px;
+}
+
+.category {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-left: 10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: 0.3s;
+}
+.subtasks {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.subtask {
+  font-size: 12px;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.subtask.done {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+
+.corner-img {
+	position: fixed; /* stays on screen even when scrolling */
+	top: 0;
+	right: 0;
+
+	width: 80px; /* adjust size */
+	height: auto;
+
+	margin: 10px; /* space from edges */
+}
+
+.corner-img {
+	width: 80px;
+	height: auto;
+	position: fixed;
+	top: 0;
+	right: 0;
+	margin: 10px;
+
+	transition: transform 0.6s ease;
+}
+
+.corner-img:hover {
+	transform: rotate(360deg);
+}
+
+#musicBtn2{
+  border: none;
+  border-radius: 10px;
+  width: 105px;
+  height: 50px;
+  cursor: pointer;
+  background-color: #588aff;
+  position: absolute;
+  top: 7%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+

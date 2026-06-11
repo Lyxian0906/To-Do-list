@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button id="musicBtn2">Background music</button>
+  <audio id="bgMusic2" loop>
+    <source src="hitslab-elevator-elevator-music-background-278381.wav" type="audio/wav">
+</audio>
+  <audio id="bgMusic" src="010. Shop.wav"></audio>
+
+<div class="topbar">
+  <button id="themeBtn">🌙</button>
+  <img id="logo" src= "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/9/9c/TLoZ_Series_Triforce_Artwork.png/revision/latest?cb=20190214050338" class="corner-img"/>
+</div>
+
+<div class="container">
+
+  <div class="todo-card">
+    <h1>To-do list</h1>
+
+    <div class="input-group">
+
+      <input id="taskInput" placeholder="Nueva tarea...">
+      <input id="subtaskInput" placeholder="Añadir nota (opcional)">
+
+      <select id="category">
+        <option value="Estudio">📚 Estudio</option>
+        <option value="Trabajo">💼 Trabajo</option>
+        <option value="Personal">🏠 Personal</option>
+      </select>
+
+      <button id="addBtn">+</button>
+      <audio id="bgMusic3" src="02. Mii Channel Intro.wav"></audio>
+    </div>
+
+    <ul id="taskList"></ul>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
